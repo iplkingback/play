@@ -1,216 +1,193 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Join India's beginner-friendly Tennis Telegram channel for Wimbledon 2025 tips. Learn trends, match reports — no fake promises.">
-  <meta name="keywords" content="Tennis betting tips, Wimbledon 2025 tips, Pawan Khatri Tennis, Tennis prediction, Telegram tennis expert, accurate tennis reports">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Pawan Khatri Tennis">
-  <meta property="og:title" content="Pawan Khatri Tennis – Accurate Wimbledon 2025 Reports">
-  <meta property="og:description" content="Join 26,000+ members getting free daily tennis tips and insights. No fake promises – only accurate, expert-backed reports.">
-  <meta property="og:image" content="https://yourdomain.com/bitcoin.jpg">
-  <meta property="og:url" content="https://yourdomain.com/">
-  <meta name="twitter:card" content="summary_large_image">
-  <title>👑Pawan Khatri Tennis👑</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to bottom right, #ffffff, #cdf2ff);
-      color: #222;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .container {
-      padding: 20px;
-      max-width: 500px;
-      margin: auto;
-    }
+<title>MATCH FIXER</title>
 
-    img.dp {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
+<!-- Preload important images -->
+<link rel="preload" as="image" href="bk.webp">
+<link rel="preload" as="image" href="vk.webp">
 
-    h1 {
-      font-size: 26px;
-      margin: 10px 0;
-      color: #FF5722;
-    }
+<style>
+body{
+margin:0;
+font-family:sans-serif;
+background:#000;
+color:#fff;
+text-align:center;
+overflow-x:hidden;
+}
 
-    h2 {
-      font-size: 14px;
-      margin: 20px 10px 10px;
-    }
+/* Background */
+.bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url('bk.webp') center/cover no-repeat;
+z-index:-1;
+filter:brightness(0.5);
+}
 
-    p.description {
-      font-size: 14px;
-      margin: 15px 0;
-    }
+/* Neon border effect */
+.bg::after{
+content:"";
+position:absolute;
+top:0;left:0;right:0;bottom:0;
+box-shadow:0 0 20px #00f, 0 0 40px #0ff inset;
+animation:neon 2s infinite alternate;
+}
+@keyframes neon{
+from{opacity:0.6;}
+to{opacity:1;}
+}
 
-    small {
-      display: block;
-      font-size: 13px;
-      margin-top: 5px;
-      color: #555;
-    }
+/* DP */
+.dp{
+width:110px;
+height:110px;
+border-radius:50%;
+margin-top:20px;
+border:3px solid #fff;
+object-fit:cover;
+}
 
-    ul {
-      text-align: center;
-      display: inline-block;
-      margin: 10px auto;
-      font-size: 15px;
-    }
+/* Title */
+h1{
+margin:10px 0 5px;
+font-size:26px;
+}
 
-    .telegram-btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: #FF5722;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin: 15px 0;
-      font-size: 16px;
-      animation: pulse 1s infinite;
-    }
+/* Tagline */
+.tagline{
+font-size:20px;
+opacity:0.8;
+margin-bottom:10px;
+}
 
-    .countdown-btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: #4CAF50;
-      color: #fff;
-      border-radius: 5px;
-      font-size: 16px;
-      margin: 10px 0;
-      text-decoration: none;
-    }
+/* Counter */
+.counter{
+font-size:16px;
+margin:10px 0;
+}
 
-    .note {
-      font-size: 13px;
-      margin-top: 25px;
-      padding: 0 10px;
-      color: #444;
-    }
+/* Countdown */
+.timer{
+color:#ff4444;
+font-size:16px;
+margin:20px 0;
+}
 
-    footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #999;
-    }
+/* TELEGRAM BUTTON */
+.telegram-btn{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:14px 22px;
+background:#0088cc;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
+font-size:16px;
+font-weight:bold;
+margin:15px auto;
+animation:pulse 1.5s infinite;
+}
+.telegram-btn img{
+width:20px;
+}
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
+/* Pulse animation */
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
 
-    #telegramModal {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #telegramModal .modal-content {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      max-width: 300px;
-      margin: auto;
-    }
-
-    #telegramModal button {
-      padding: 10px 20px;
-      background: #FF5722;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 15px;
-      cursor: pointer;
-    }
-  </style>
+/* Text lines */
+.info{
+font-size:30px;
+margin-top:50px;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <img class="dp" src="bitcoin.jpg" alt="Pawan Khatri Tennis" loading="lazy" onerror="this.src='fallback.jpg';" />
-    <h1>👑Pawan Khatri Tennis👑</h1>
-    <small>26,295+ Subscribers</small>
-    <h2>Tennis World Ka Badshah</h2>
-    <a class="telegram-btn" href="https://telegram.me/+YORectZYavk5OGFl">JOIN FREE TELEGRAM</a>
-    <p class="description">👇Wimbledon 2025 All Matches Free Accurate Reports👇</p>
-    <div>
-      <a href="javascript:void(0);" class="countdown-btn" id="countdownBtn">
-        Free Joining Ends In <span id="timer">20</span> seconds
-      </a>
-    </div>
-    <a class="telegram-btn" href="https://telegram.me/+YORectZYavk5OGFl">JOIN FREE TELEGRAM</a>
-    <div>
-      <strong>Why Our Telegram Community Works:</strong>
-      <ul>
-        <li>✅ Daily Free Tennis Matches Updates</li>
-        <li>✅ Proper Entry & Exit</li>
-        <li>✅ 10 Years Of Experience</li>
-        <li>✅ No Fake promises, Practical Results</li>
-      </ul>
-    </div>
-    <p class="note">
-      📌Note: Sirf 3 Din Tak Hamari Reports Follow Karo — Khud Dekho Kitna Accurate Result Milta Hai. Pehle History Dekho, Phir Bharosa Banao.
-    </p>
-  </div>
 
-  <footer>
-    <p>© 2025 Pawan Khatri Tennis • All Rights Reserved</p>
-  </footer>
+<div class="bg"></div>
 
-  <div id="telegramModal">
-    <div class="modal-content">
-      <h3>📢Pawan Khatri Tennis</h3>
-      <p style="font-size:14px; margin-bottom:20px;">
-        You're about to join our Telegram group with 26,000+ members.
-      </p>
-      <button id="joinTelegramNow">Join Now</button>
-      <p style="font-size:12px; color:#777; margin-top:15px;">Accurate Tennis Reports.</p>
-    </div>
-  </div>
+<img src="vkp.webp" class="dp" alt="Match Expert">
 
-  <script>
-    const timerEl = document.getElementById("timer");
-    const countdownBtn = document.getElementById("countdownBtn");
-    const modal = document.getElementById("telegramModal");
-    const joinTelegramNow = document.getElementById("joinTelegramNow");
-    const redirectURL = "https://telegram.me/+JhL-_ilh-RM3NzZl";
+<h1>MATCH FIXER</h1>
+<div class="tagline">india's no. 1 cricket expert</div>
 
-    let timeLeft = 20;
+<div class="counter" id="counter">29000 subscribers</div>
 
-    const countdown = setInterval(() => {
-      timeLeft--;
-      timerEl.textContent = timeLeft;
+<div class="timer" id="timer">Free joining ends in 10 seconds</div>
 
-      if (timeLeft <= 0) {
-        clearInterval(countdown);
-        countdownBtn.textContent = "Redirecting...";
-        modal.style.display = "flex";
+<!-- ✅ Updated Telegram Button -->
+<a href="https://telegram.me/+cdfXSddiMxpmYTdl" id="telegramBtn" class="telegram-btn">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+Join My Telegram
+</a>
 
-        setTimeout(() => {
-          window.location.href = redirectURL;
-        }, 2000);
-      }
-    }, 1000);
+<div class="info">IPL 2026 All Matches Free Reports</div>
+<div class="info">T-20 world cup - 91% matches pass</div>
 
-    joinTelegramNow.onclick = function () {
-      window.location.href = redirectURL;
-    };
-  </script>
+<script>
+// Subscriber animation
+let count = 29000;
+const target = 29580;
+const counter = document.getElementById("counter");
+
+function updateCounter(){
+if(count < target){
+count += Math.floor(Math.random()*8)+1;
+if(count > target) count = target;
+counter.innerText = count + " subscribers";
+setTimeout(updateCounter, 80);
+}
+}
+updateCounter();
+
+// Countdown timer (optional display only)
+let time = 10;
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(()=>{
+time--;
+timer.innerText = "Free joining ends in " + time + " seconds";
+
+if(time <= 0){
+clearInterval(countdown);
+// removed automatic redirect, user clicks the button manually
+}
+},1000);
+</script>
+
+<!-- ✅ Meta Pixel Code (Deferred at the end of body) -->
+<script>
+(window.requestIdleCallback || function(cb){setTimeout(cb,1)})(function() {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '2064521394406792'); // Pixel ID
+  fbq('track', 'PageView');
+});
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2064521394406792&ev=PageView&noscript=1"/>
+</noscript>
+
 </body>
 </html>
